@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/api/annotations.proto";
+
+service Api {
+    /*******************************************/
+    // Files RPC
+    /*******************************************/
+    rpc GetFile (GetFileRequest) returns (File) {
+        option (google.api.http) = {
+            get: "/file/{namespace}"
+        };
+    }
+
+    rpc SetFile (SetFileRequest) returns (File) {
+        option (google.api.http) = {
+            put: "/file/{namespace}"
+            body: "*"
+        };
+    }
+
+}
+
+/*******************************************/
+// Files RPC Messages
+/*******************************************/
+message GetFileRequest {
+    string namespace = 1;
+    string file_path = 2;
+}
+
+message SetFileRequest {
+    string namespace    = 1;
+    string file_path    = 2;
+    File   file_content = 3;
+}
+
+message File {
+    string name         = 1;
+    string content_type = 2;
+    bytes  content      = 3;
+}
