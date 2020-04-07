@@ -4,7 +4,7 @@ import (
 	"github.com/sirupsen/logrus"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/maxdcr/grpc-file-transfer/srv"
+	"github.com/mxdec/grpc-file-transfer/srv"
 )
 
 var (

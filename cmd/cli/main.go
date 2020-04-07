@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	pb "github.com/maxdcr/grpc-file-transfer/proto"
+	pb "github.com/mxdec/grpc-file-transfer/proto"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"

@@ -15,7 +15,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 
-	pb "github.com/maxdcr/grpc-file-transfer/proto"
+	pb "github.com/mxdec/grpc-file-transfer/proto"
 	"google.golang.org/grpc/health/grpc_health_v1"
 )
 
